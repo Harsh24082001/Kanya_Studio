@@ -1,142 +1,68 @@
-import React from "react";
-import Header from "./Header";
-import { Playfair_Display } from "next/font/google";
-import Photo from "./Photo";
-import Video from "./Video";
-import Footer from "./Footer";
+import React from 'react'
+import Header from './Header'
+import { Playfair_Display } from 'next/font/google'
+import Photo from './Photo'
+import Video from './Video'
+import Footer from './Footer'
 
 const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-});
+    subsets: ['latin'],
+    weight: ['400', '700'], // adjust as needed
+    style: ['normal', 'italic'], // if you need italic
+})
 
 const FrontPage = () => {
-  return (
-    <div className="bg-[#f0e9e0] w-full overflow-hidden">
-      {/* HEADER */}
-      <div className="absolute top-0 w-full z-10">
-        <Header />
-      </div>
-
-      {/* HERO IMAGE */}
-      <img
-        src="/front.png"
-        alt="Home Image"
-        className="w-full h-[500px] md:h-[700px] object-cover"
-      />
-
-      {/* MAIN SECTION */}
-      <section className="bg-[#f0e9e0] w-full py-16 px-6 md:px-16 relative">
-        <h1
-          className={`${playfair.className} text-3xl sm:text-4xl md:text-6xl font-semibold text-center text-black/90 mb-10`}
-        >
-          TIMELESS WEDDING STORIES
-          <br />
-          <span className="text-2xl md:text-3xl italic">with</span> HEART,
-          EMOTION, CINEMATIC
-        </h1>
-
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-10">
-          {/* Left Image */}
-          <img
-            src="/photo/image.png"
-            alt="wedding1"
-            className="w-full lg:w-[380px] h-[300px] md:h-[350px] object-cover rounded-lg shadow-md"
-          />
-
-          {/* Center Text */}
-          <p
-            className={`${playfair.className} text-sm sm:text-base text-black text-justify leading-relaxed`}
-          >
-            Considered to be the epitome of Modern Photography and Filmmaking,
-            Kanya Studios is dedicated to transforming wedding moments into
-            timeless memories. With a passion for storytelling through both
-            photography and videography, we focus on the emotions, the details,
-            and the fleeting moments that make every wedding unique.
-            <br />
-            <br />
-            Our team works closely with couples to craft cinematic experiences
-            that reflect their love story. Every frame we capture is designed to
-            be cherished forever, creating visuals that resonate across
-            generations.
-          </p>
-
-          {/* Right Image */}
-          <img
-            src="/photo/image2.png"
-            alt="wedding2"
-            className="w-full lg:w-[350px] h-[300px] md:h-[350px] object-cover rounded-lg shadow-md"
-          />
+    return (
+        <div className='bg-[#f0e9e0] max-w-full'>
+            <div className="absolute  w-full ">
+                <Header />
+            </div>
+            <img src="front.png" alt="HomeImage" className='w-full h-238 object-cover' />
+            <div >
+                <div className='bg-[#f0e9e0] max-w-full h-250 '>
+                    <h1 className={`${playfair.className} absolute max-w-full text-6xl pt-60 ml-120 text-black/90`} >TIMELESS WEDDING STORIES  <br />
+                        <span className={`${playfair.className} text-3xl italic`}> with </span>HEART, EMOTION CINEMATIC  </h1>
+                    <div className='flex justify-between'>
+                        <img src="photo/image.png" alt="image1" className='w-100 object-cover h-120 mt-92 ml-60' />
+                        <p className={`${playfair.className} text-md text-black text-justify relative m-4 mt-100`}>
+                            Considered to be the epitome of Modern Photography and Filmmaking,
+                            Kanya Studios is dedicated to transforming wedding moments into timeless
+                            memories. With a passion for storytelling through both photography and videography,
+                            we focus on the emotions, the details, and the fleeting moments that make every wedding unique.
+                            <br />
+                            <br />
+                            Our team works closely with couples to craft cinematic experiences that reflect their love story.
+                            Every frame we capture is designed to be cherished forever, creating visuals that resonate across generations.</p>
+                        <img src="photo/image2.png" alt="image1" className='bottom-50 w-90 object-cover h-140 mt-40 mr-62 ' />
+                    </div>
+                    <img src="photo/brandlogo.png" alt="image1" className='relative object-cover ml-180 bottom-25' />
+                </div>
+            </div>
+            <div className='mb-20 max-w-full' >
+                <Photo />
+            </div>
+            <div>
+                <Video />
+            </div>
+            <div className='relative w-full'>
+                <img src="/photo/WeddingImage/Kanya Studios Main.png" alt="main" className='object-cover max-w-full h-full opacity-90' />
+                <img src="/photo/WeddingImage/icon.png" alt="flyicon" className='absolute bottom-120 w-50 ml-45' />
+                <p className='absolute top-80 text-md text-white w-200 justify ml-50'>
+                    Fly Production House represents our premier photography service,
+                    led by Divesh Paswan, the visionary founder of Fly Production.
+                    Our mission is to craft timeless images that capture the true essence of your special day.
+                    With a refined, unobtrusive style and a focus on bright, airy visuals,
+                    we create photographs that transport you back to those precious moments for years to come.
+                    This exclusive package is reserved for a select few weddings,
+                    reflecting the care and dedication we pour into every frame.
+                    Due to its distinctiveness,Fly Production House deserves its own dedicated website an
+                    experience as exceptional as the memories we capture. <br />click the link button </p>
+                <button className={`${playfair.className} bg-[#a0884d] absolute bottom-50 ml-50 p-5 text-sm rounded-md flex items-center justify-center text-white`}>
+                <a href='https://flyproductionhouse.com/'>Fly Production House</a></button>
+            </div>
+            <Footer/>
         </div>
+    )
+}
 
-        {/* Brand Logo */}
-        <div className="flex justify-center mt-12">
-          <img
-            src="/photo/brandlogo.png"
-            alt="brand logo"
-            className="w-[160px] md:w-[200px] object-contain"
-          />
-        </div>
-      </section>
-
-      {/* PHOTO GALLERY */}
-      <div className="mb-20 w-full">
-        <Photo />
-      </div>
-
-      {/* VIDEO SECTION */}
-      <div>
-        <Video />
-      </div>
-
-      {/* FLY PRODUCTION SECTION */}
-      <section className="relative w-full mt-20">
-        <img
-          src="/photo/WeddingImage/Kanya Studios Main.png"
-          alt="main"
-          className="object-cover w-full h-[500px] md:h-[700px] opacity-90"
-        />
-
-        <div className="absolute inset-0 flex flex-col items-start justify-center px-6 md:px-20 space-y-4 bg-black/40 md:bg-transparent">
-          <img
-            src="/photo/WeddingImage/icon.png"
-            alt="fly icon"
-            className="w-[80px] md:w-[120px] mb-2"
-          />
-
-          <p
-            className={`${playfair.className} text-white text-sm sm:text-base md:text-lg max-w-[700px] leading-relaxed`}
-          >
-            Fly Production House represents our premier photography service,
-            led by Divesh Paswan, the visionary founder of Fly Production. Our
-            mission is to craft timeless images that capture the true essence of
-            your special day. With a refined, unobtrusive style and a focus on
-            bright, airy visuals, we create photographs that transport you back
-            to those precious moments for years to come.
-            <br />
-            <br />
-            This exclusive package is reserved for a select few weddings,
-            reflecting the care and dedication we pour into every frame. Due to
-            its distinctiveness, Fly Production House deserves its own dedicated
-            website — an experience as exceptional as the memories we capture.
-          </p>
-
-          <a
-            href="https://flyproductionhouse.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`${playfair.className} bg-[#a0884d] mt-4 px-6 py-3 text-sm md:text-base rounded-md text-white hover:bg-[#8b763d] transition-all duration-300`}
-          >
-            Visit Fly Production House
-          </a>
-        </div>
-      </section>
-
-      {/* FOOTER */}
-      <Footer />
-    </div>
-  );
-};
-
-export default FrontPage;
+export default FrontPage
