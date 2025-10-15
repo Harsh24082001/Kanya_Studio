@@ -81,8 +81,8 @@ const Video = () => {
         }
       </div> */}
 
-      <Videos/>
-      <button className={`${playfair.className}  ml-220 bg-[#a0884d] p-3 text-xs rounded-md flex items-center justify-center text-white`}>Videography more</button>
+      {/* <Videos/> */}
+      {/* <button className={`${playfair.className}  ml-220 bg-[#a0884d] p-3 text-xs rounded-md flex items-center justify-center text-white`}>Videography more</button> */}
     </div>
   )
 }
