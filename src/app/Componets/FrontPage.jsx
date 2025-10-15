@@ -17,7 +17,7 @@ const FrontPage = () => {
             <div className="absolute  w-full ">
                 <Header />
             </div>
-            <img src="front.png" alt="HomeImage" className='w-full h-230 object-cover' />
+            <img src="front.png" alt="HomeImage" className='w-full h-238 object-cover' />
             <div >
                 <div className='bg-[#f0e9e0] max-w-full h-250 '>
                     <h1 className={`${playfair.className} absolute max-w-full text-6xl pt-60 ml-120 text-black/90`} >TIMELESS WEDDING STORIES  <br />
