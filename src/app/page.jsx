@@ -4,7 +4,7 @@ import Main from "./Main";
 
 export default function Home() {
   return (
-    <div className="bg-[#f0e9e0]">
+    <div className="bg-[#f0e9e0] mx-w-full">
       <Main/>
     </div>
 

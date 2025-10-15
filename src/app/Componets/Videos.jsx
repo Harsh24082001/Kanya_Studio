@@ -1,50 +1,47 @@
-"use client"
+"use client";
+import React, { useRef } from "react";
+import ReactPlayer from "react-player"; // ✅ Correct import
 
-import React, { useEffect, useRef } from 'react'
+const Videos = () => {
+  const players = useRef([]);
 
-const Videos = ({video}) => {
-     const videoRefs = useRef([]);
-
-  useEffect(() => {
-    // Clear refs on remount
-    videoRefs.current = videoRefs.current.slice(0, videos.length);
-  }, [video]);
+  // Add your Vimeo video links (must be public or embeddable)
+  const video = [
+    {src:"/public/photo/WeddingImage/Demo.mp4"}
+  ];
 
   const handlePlay = (playingIndex) => {
-    videoRefs.current.forEach((video, index) => {
-      if (index !== playingIndex && video && !video.paused) {
-        video.pause();
+    players.current.forEach((player, index) => {
+      if (index !== playingIndex && player) {
+        player.getInternalPlayer()?.pause?.();
       }
     });
   };
 
-  const videos = [
-  { src: "/photo/WeddingVideo/Demo1.mp4", alt: "vid1" },
-  { src: "/photo/WeddingVideo/Demo2.mp4", alt: "vid2" },
-  { src: "/photo/WeddingVideo/Demo3.mp4", alt: "vid3" },
-  { src: "/photo/WeddingVideo/Demo4.mp4", alt: "vid4" },
-  { src: "/photo/WeddingVideo/Demo5.mp4", alt: "vid5" },
-  { src: "/photo/WeddingVideo/Demo6.mp4", alt: "vid6" },
-];
-    return (
-        <div>
-            <div className="-mt-30 mb-50 grid grid-cols-2 justify-center items-center ml-55 mr-55">
-                {videos.map((item, index) => (
-                    <div key={index} className="flex justify-center items-center">
-                        <video
-                            ref={(el) => (videoRefs.current[index] = el)}
-                            src={item.src}
-                            controls
-                            height={150}
-                            width={400}
-                            onPlay={() => handlePlay(index)}
-                            className="rotate-[270deg] object-cover -mb-75"
-                        />
-                    </div>
-                ))}
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className="min-h-screen bg-[#F8F3EC] px-10 py-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        {video.map((item, index) => (
+          <div
+            key={index}
+            className="rounded-xl shadow-lg overflow-hidden bg-white p-2"
+          >
+            <ReactPlayer
+              ref={(el) => (players.current[index] = el)}
+              url={item.src}
+              width="100%"
+              height="250px"
+              controls
+              onPlay={() => handlePlay(index)}
+            />
+            <p className="text-center mt-3 text-lg font-medium text-gray-700">
+              {item.title}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
-export default Videos
+export default Videos;
