@@ -29,13 +29,13 @@ const Photo = () => {
 
   return (
     <div>
-      <div className='text-center py-20'>
+      <div className='max-w-full text-center py-20'>
         <h1 className={`${playfair.className} text-3xl italic font-extralight`}>“SOME OF THE MOST 
           <span className='italic font-semibold text-4xl'>CAPTIVATING</span> WEDDING IMAGES”</h1>
       </div>
       <div className="grid grid-cols-5 gap-0.5 justify-center ">
       {images.map((img, index) => (
-        <div key={index} className="relative w-95 h-95">
+        <div key={index} className="relative w-94 h-95 ">
           <Image
             src={img.src}
             alt={img.alt}

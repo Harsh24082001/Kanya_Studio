@@ -14,13 +14,13 @@ const playfair = Playfair_Display({
 const FrontPage = () => {
     return (
         <div className='bg-[#f0e9e0] max-w-full'>
-            <div className="absolute top-0 left-0 w-full ">
+            <div className="absolute  w-full ">
                 <Header />
             </div>
             <img src="front.png" alt="HomeImage" className=' w-full h-238 object-cover ' />
             <div >
-                <div className='bg-[#f0e9e0] w-full h-250 '>
-                    <h1 className={`${playfair.className} absolute text-6xl pt-60 ml-120 text-black/90`} >TIMELESS WEDDING STORIES  <br />
+                <div className='bg-[#f0e9e0] max-w-full h-250 '>
+                    <h1 className={`${playfair.className} absolute max-w-full text-6xl pt-60 ml-120 text-black/90`} >TIMELESS WEDDING STORIES  <br />
                         <span className={`${playfair.className} text-3xl italic`}> with </span>HEART, EMOTION CINEMATIC  </h1>
                     <div className='flex justify-between'>
                         <img src="photo/image.png" alt="image1" className='w-100 object-cover h-120 mt-92 ml-60' />
@@ -38,14 +38,14 @@ const FrontPage = () => {
                     <img src="photo/brandlogo.png" alt="image1" className='relative object-cover ml-180 bottom-25' />
                 </div>
             </div>
-            <div className='mb-20' >
+            <div className='mb-20 max-w-full' >
                 <Photo />
             </div>
             <div>
                 <Video />
             </div>
-            <div className='relative'>
-                <img src="/photo/WeddingImage/Kanya Studios Main.png" alt="main" className='object-cover w-full h-200 opacity-90' />
+            <div className='relative w-full'>
+                <img src="/photo/WeddingImage/Kanya Studios Main.png" alt="main" className='object-cover max-w-full h-full opacity-90' />
                 <img src="/photo/WeddingImage/icon.png" alt="flyicon" className='absolute bottom-120 w-50 ml-45' />
                 <p className='absolute top-80 text-md text-white w-200 justify ml-50'>
                     Fly Production House represents our premier photography service,
