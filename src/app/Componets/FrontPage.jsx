@@ -46,7 +46,7 @@ const FrontPage = () => {
             </div>
             <div className='relative w-full'>
                 <img src="/photo/WeddingImage/Kanya Studios Main.png" alt="main" className='object-cover max-w-full h-full opacity-90' />
-                <img src="/photo/WeddingImage/icon.png" alt="flyicon" className='absolute bottom-120 w-50 ml-45' />
+                <img src="/photo/WeddingImage/icon.png" alt="flyicon" className='absolute bottom-150 w-50 ml-45' />
                 <p className='absolute top-80 text-md text-white w-200 justify ml-50'>
                     Fly Production House represents our premier photography service,
                     led by Divesh Paswan, the visionary founder of Fly Production.
