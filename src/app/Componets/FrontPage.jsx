@@ -13,7 +13,7 @@ const playfair = Playfair_Display({
 
 const FrontPage = () => {
     return (
-        <div className='bg-[#f0e9e0]'>
+        <div className='bg-[#f0e9e0] max-w-full'>
             <div className="absolute top-0 left-0 w-full ">
                 <Header />
             </div>
