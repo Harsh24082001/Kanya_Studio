@@ -35,7 +35,7 @@ const Photo = () => {
       </div>
       <div className="grid grid-cols-5 gap-0.5 justify-center ">
       {images.map((img, index) => (
-        <div key={index} className="relative w-93 h-95 ">
+        <div key={index} className="relative w-94 h-94 ">
           <Image
             src={img.src}
             alt={img.alt}
