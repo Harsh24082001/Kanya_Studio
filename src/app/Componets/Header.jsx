@@ -1,20 +1,42 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 
 
 const Header = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return (
-        <div>
-            <div className="flex ">
-                <ul className="w-full p-2 gap-10 flex items-center text-center text-md justify-center text-gray-700">
-                    <li>Photography</li>
-                    <li>Films</li>
-                    <li className=" "><img src="logo.png" alt="Logo" width={300} /></li>
-                    <li>Contact us</li>
-                    <li>About</li>
+        <nav className="w-full bg-transparent text-gray-800 ">
+            <div className="flex justify-between items-center px-6 py-4">
+                {/* Left side - Logo */}
+                <img src="/logo.png" alt="Logo" className="w-32 sm:w-40 object-contain md:hidden"/>
+
+                {/* Menu button (only mobile) */}
+                <button className="md:hidden text-3xl " onClick={() => setMenuOpen(!menuOpen)}>
+                    ☰
+                </button>
+
+                {/* Desktop Menu */}
+                <ul className="hidden md:flex justify-center md:w-full items-center gap-10 text-base font-medium">
+                    <li className="hover:text-black cursor-pointer transition">Photography</li>
+                    <li className="hover:text-black cursor-pointer transition">Films</li>
+                    <img src="/logo.png" alt="Logo" className="w-32 sm:w-80 object-contain"/>
+                    <li className="hover:text-black cursor-pointer transition">Contact Us</li>
+                    <li className="hover:text-black cursor-pointer transition">About</li>
                 </ul>
             </div>
-        </div>
-    )
+
+            {/* Mobile Dropdown Menu */}
+            {menuOpen && (
+                <ul className="flex flex-col items-center bg-white text-gray-700 py-4 space-y-4 md:hidden shadow-md">
+                    <li className="hover:text-black cursor-pointer transition">Photography</li>
+                    <li className="hover:text-black cursor-pointer transition">Films</li>
+                    <li className="hover:text-black cursor-pointer transition">Contact Us</li>
+                    <li className="hover:text-black cursor-pointer transition">About</li>
+                </ul>
+            )}
+        </nav>
+    );
 }
 
 export default Header

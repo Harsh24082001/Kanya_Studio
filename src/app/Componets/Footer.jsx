@@ -4,45 +4,68 @@ import { MdMailOutline, MdPhoneAndroid } from 'react-icons/md';
 
 const Footer = () => {
     return (
-        <div>
-            <div className='p-12 flex'>
-                <div>
-                    <a href="/"><img src="/logo.png" alt="logo" className='w-75 ml-40 ' /></a>
-                    <div className='ml-55' style={{ display: 'flex', gap: '20px', fontSize: '24px' }}>
-                        <a href="https://www.instagram.com/kanyastudious/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                            <FaInstagram color="black" />
-                        </a>
-                        <a href="https://www.facebook.com/kanyastudious" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                            <FaFacebookF color="black" />
-                        </a>
-                        <a href="https://twitter.com/kanyastudious" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                            <FaTwitter color="black" />
-                        </a>
-                        <a href="https://www.youtube.com/@flyproductionhouse" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                            <FaYoutube color="black" />
-                        </a>
-                    </div>
-                </div>
-                <div className='ml-80 pt-5'>
-                    <ul className="text-md justify-center text-gray-700 ">
-                        <li className='m-3'>Photography</li>
-                        <li className='m-3'>Films</li>
-                        <li className='m-3'>Contact us</li>
-                        <li className='m-3'>About</li>
-                    </ul>
-                </div>
-                <div className='ml-80 gap-5 '>
-                     <a href="https://maps.app.goo.gl/sCzCfUPnudShYhVB7" className='flex m-2'><p className='flex items-center '><FaHome className='w-10'/> Vasari Hill Rd, Rustomjee Ease Zone Mall Malad West, 
-                     <br />Mumbai, Maharashtra 400104. 1st Floor Office no - 3068</p></a>
-                     <a href="mailto:flyproductionhouse.info@gmail.com" className='flex items-center m-2'><MdMailOutline className='w-10'/>flyproductionhouse.info@gmail.com</a>
-                     <a href="tel:+02245038072" className='flex items-center m-2'><MdPhoneAndroid className='w-10'/> 02245038072</a>
-                     <a href="tel:+91 99873 06758" className='flex items-center m-2'><FaPhone className='w-10'/> +91 99873 06758</a>
-                </div>
-            </div>
-            <div> 
-                <p className='text-center p-2'>© 2024 Kanya Studio. All Rights Reserved.</p>
-            </div>
+      
+    <footer className="bg-white text-gray-800">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        {/* Logo + Social Icons */}
+        <div className="flex flex-col items-center sm:items-start">
+          <a href="/">
+            <img src="/logo.png" alt="logo" className="w-36 sm:w-48 mb-4" />
+          </a>
+
+          <div className="flex gap-5 text-xl md:text-2xl">
+            <a href="https://www.instagram.com/kanyastudious/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <FaInstagram className="hover:text-pink-600 transition" />
+            </a>
+            <a href="https://www.facebook.com/kanyastudious" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <FaFacebookF className="hover:text-blue-600 transition" />
+            </a>
+            <a href="https://twitter.com/kanyastudious" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <FaTwitter className="hover:text-sky-500 transition" />
+            </a>
+            <a href="https://www.youtube.com/@flyproductionhouse" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <FaYoutube className="hover:text-red-600 transition" />
+            </a>
+          </div>
         </div>
+
+        {/* Navigation Links */}
+        <div className="flex flex-col items-center sm:items-start md:text-md">
+          <ul className="text-center sm:text-left space-y-3 ">
+            <a href="/photography"><li className="hover:text-[#a0884d] transition cursor-pointer">Photography</li></a>
+            <a href=""><li className="hover:text-[#a0884d] transition cursor-pointer">Films</li></a>
+            <a href=""><li className="hover:text-[#a0884d] transition cursor-pointer">Contact Us</li></a>
+            <a href=""><li className="hover:text-[#a0884d] transition cursor-pointer">About</li></a>
+          </ul>
+        </div>
+
+        {/* Contact Info */}
+        <div className="flex flex-col items-center text-sm md:text-md sm:items-start space-y-3 text-center sm:text-left ">
+          <a href="https://maps.app.goo.gl/sCzCfUPnudShYhVB7" className="flex items-start justify-center sm:justify-start gap-2 hover:text-[#a0884d] transition">
+            <FaHome className="md:size-5 " />
+            <p className='md:'>Rustomjee Ease Zone Mall, Malad West,<br />Mumbai, Maharashtra 400104.</p>
+          </a>
+
+          <a href="mailto:flyproductionhouse.info@gmail.com" className="flex items-center justify-center sm:justify-start gap-2 hover:text-[#a0884d] transition">
+            <MdMailOutline  className="md:size-5" /> flyproductionhouse.info@gmail.com
+          </a>
+
+          <a href="tel:+02245038072" className="flex items-center justify-center sm:justify-start gap-2 hover:text-[#a0884d] transition">
+            <MdPhoneAndroid  className="md:size-5"/> 02245038072
+          </a>
+
+          <a href="tel:+919987306758" className="flex items-center justify-center sm:justify-start gap-2 hover:text-[#a0884d] transition">
+            <FaPhone  className="md:size-5"/> +91 99873 06758
+          </a>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-300 mt-6">
+        <p className="text-center text-sm py-4 md:text-md">© 2024 Kanya Studio. All Rights Reserved.</p>
+      </div>
+    </footer>
     )
 }
 

@@ -28,25 +28,44 @@ const Photo = () => {
   ];
 
   return (
-    <div>
-      <div className='max-w-full text-center py-20'>
-        <h1 className={`${playfair.className} text-3xl italic font-extralight`}>“SOME OF THE MOST 
-          <span className='italic font-semibold text-4xl'>CAPTIVATING</span> WEDDING IMAGES”</h1>
+    <div className="w-full text-center py-16">
+  {/* Heading */}
+  <h1
+    className={`${playfair.className} text-2xl sm:text-3xl md:text-4xl italic font-extralight px-4`}
+  >
+    “SOME OF THE MOST{" "}
+    <span className="italic font-semibold text-3xl sm:text-4xl md:text-5xl">
+      CAPTIVATING
+    </span>{" "}
+    WEDDING IMAGES”
+  </h1>
+
+  {/* Image Grid */}
+  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1 mt-10 ">
+    {images.map((img, index) => (
+      <div
+        key={index}
+        className="relative w-full aspect-[5/5] overflow-hidden"
+      >
+        <Image
+          src={img.src}
+          alt={img.alt}
+          fill
+          className="object-cover hover:scale-105 transition-transform duration-500"
+        />
       </div>
-      <div className="grid grid-cols-5 gap-0.5 justify-center ">
-      {images.map((img, index) => (
-        <div key={index} className="relative w-94 h-95 ">
-          <Image
-            src={img.src}
-            alt={img.alt}
-            fill
-            className="object-cover"
-          />
-        </div>
-      ))}
-    </div >
-    <button className={`${playfair.className} relative top-25 ml-220 bg-[#a0884d] p-3 text-xs rounded-md flex items-center justify-center text-white`}>Photography more</button>
-    </div>
+    ))}
+  </div>
+
+  {/* Button */}
+  <div className="flex justify-center mt-10">
+    <button
+      className={`${playfair.className} bg-[#a0884d] p-3 text-xs sm:text-base rounded-md text-white md:font-medium hover:bg-[#8c7643] transition`}   >
+      Photography More
+    </button>
+  </div>
+</div>
+
   );
 };
 
