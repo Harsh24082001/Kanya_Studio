@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from '../Componets/Header'
 
 const page = () => {
   return (
-    <div>film</div>
+    <div>
+      <Header/>
+    </div>
   )
 }
 

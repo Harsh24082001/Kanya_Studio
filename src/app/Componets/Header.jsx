@@ -18,11 +18,11 @@ const Header = () => {
 
                 {/* Desktop Menu */}
                 <ul className="hidden md:flex justify-center md:w-full items-center gap-10 text-base font-medium">
-                    <li className="hover:text-black cursor-pointer transition">Photography</li>
-                    <li className="hover:text-black cursor-pointer transition">Films</li>
-                    <img src="/logo.png" alt="Logo" className="w-32 sm:w-80 object-contain"/>
-                    <li className="hover:text-black cursor-pointer transition">Contact Us</li>
-                    <li className="hover:text-black cursor-pointer transition">About</li>
+                    <a href="/photography"><li className="hover:text-black cursor-pointer transition">Photography</li></a>
+                    <a href="/videography"><li className="hover:text-black cursor-pointer transition">Films</li></a>
+                    <a href="/"><img src="/logo.png" alt="Logo" className="w-32 sm:w-80 object-contain"/></a>
+                    <a href="/contact-us"><li className="hover:text-black cursor-pointer transition">Contact Us</li></a>
+                    <a href="/about-us"><li className="hover:text-black cursor-pointer transition">About</li></a>
                 </ul>
             </div>
 

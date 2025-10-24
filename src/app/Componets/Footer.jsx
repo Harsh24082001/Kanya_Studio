@@ -34,9 +34,9 @@ const Footer = () => {
         <div className="flex flex-col items-center sm:items-start md:text-md">
           <ul className="text-center sm:text-left space-y-3 ">
             <a href="/photography"><li className="hover:text-[#a0884d] transition cursor-pointer">Photography</li></a>
-            <a href=""><li className="hover:text-[#a0884d] transition cursor-pointer">Films</li></a>
-            <a href=""><li className="hover:text-[#a0884d] transition cursor-pointer">Contact Us</li></a>
-            <a href=""><li className="hover:text-[#a0884d] transition cursor-pointer">About</li></a>
+            <a href="/videography"><li className="hover:text-[#a0884d] transition cursor-pointer">Films</li></a>
+            <a href="/contact-us"><li className="hover:text-[#a0884d] transition cursor-pointer">Contact Us</li></a>
+            <a href="/about-us"><li className="hover:text-[#a0884d] transition cursor-pointer">About</li></a>
           </ul>
         </div>
 
