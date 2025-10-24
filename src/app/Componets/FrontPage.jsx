@@ -32,7 +32,7 @@ const FrontPage = () => {
                     HEART, EMOTION, CINEMATIC </h1>
 
                 {/* Content Section */}
-                <div className="flex flex-col mt-5 md:flex-row justify-between items-center gap-8 px-6 md:px-45">
+                <div className="flex flex-col mt-5 md:flex-row justify-center items-center gap-8 px-6 md:px-45">
                     {/* Left Image */}
                     <img
                         src="/photo/image.png"
@@ -47,20 +47,15 @@ const FrontPage = () => {
                         Considered to be the epitome of Modern Photography and Filmmaking, Kanya
                         Studios is dedicated to transforming wedding moments into timeless
                         memories. With a passion for storytelling through both photography and
-                        videography, we focus on the emotions, the details, and the fleeting
-                        moments that make every wedding unique.
-                        <br />
-                        <br />
-                        Our team works closely with couples to craft cinematic experiences that
-                        reflect their love story. Every frame we capture is designed to be
-                        cherished forever, creating visuals that resonate across generations.
+                        videography. We focus on the emotions, the details, and the fleeting
+                        moments that make every wedding unique. 
                     </p>
 
                     {/* Right Image */}
                     <img
                         src="/photo/image2.png"
                         alt="Wedding 2"
-                        className="w-full md:w-100 h-64 md:h-140 md:-mt-75 object-cover  shadow-md"
+                        className="w-full md:w-100 h-64 md:h-140 md:-mt-80 object-cover  shadow-md"
                     />
                 </div>
 
