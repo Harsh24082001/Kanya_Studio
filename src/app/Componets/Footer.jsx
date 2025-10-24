@@ -5,8 +5,8 @@ import { MdMailOutline, MdPhoneAndroid } from 'react-icons/md';
 const Footer = () => {
     return (
       
-    <footer className="bg-white text-gray-800">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    <footer className="bg-white text-gray-800 ">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 py-12 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-10">
 
         {/* Logo + Social Icons */}
         <div className="flex flex-col items-center sm:items-start">
@@ -31,12 +31,12 @@ const Footer = () => {
         </div>
 
         {/* Navigation Links */}
-        <div className="flex flex-col items-center sm:items-start md:text-md">
+        <div className="flex flex-col items-center sm:items-start md:text-md md:mt-5">
           <ul className="text-center sm:text-left space-y-3 ">
-            <a href="/photography"><li className="hover:text-[#a0884d] transition cursor-pointer">Photography</li></a>
-            <a href="/videography"><li className="hover:text-[#a0884d] transition cursor-pointer">Films</li></a>
-            <a href="/contact-us"><li className="hover:text-[#a0884d] transition cursor-pointer">Contact Us</li></a>
-            <a href="/about-us"><li className="hover:text-[#a0884d] transition cursor-pointer">About</li></a>
+            <a href="/photography"><li className="hover:text-[#a0884d] transition cursor-pointer m-1">Photography</li></a>
+            <a href="/videography"><li className="hover:text-[#a0884d] transition cursor-pointer m-1">Films</li></a>
+            <a href="/contact-us"><li className="hover:text-[#a0884d] transition cursor-pointer m-1">Contact Us</li></a>
+            <a href="/about-us"><li className="hover:text-[#a0884d] transition cursor-pointer m-1">About</li></a>
           </ul>
         </div>
 

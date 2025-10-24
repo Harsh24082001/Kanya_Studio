@@ -24,26 +24,24 @@ const FrontPage = () => {
                 <img src="/front.png" alt="Home Image" className="w-full h-[60vh] sm:h-[70vh] md:h-[100vh] object-cover" />
             </div>
 
-            <div className="bg-[#f0e9e0] w-full py-0 relative overflow-hidden mb-20">
+            <div className="bg-[#f0e9e0] w-full py-0 relative overflow-hidden mb-20 ">
                 {/* Heading Section */}
-                <h1 className={`${playfair.className} text-center mt-10  md:mt-30 text-black/90 text-2xl sm:text-3xl  md:text-6xl md:relative font-medium leading-tight px-4`}>
+                <h1 className={`${playfair.className} text-center mt-10  md:mt-30 text-black/90 text-4xl sm:text-3xl  md:text-6xl md:relative font-medium leading-tight px-4`}>
                     TIMELESS WEDDING STORIES <br />
                     <span className={`${playfair.className} text-2xl sm:text-3xl italic font-normal`}>with</span>{" "}
                     HEART, EMOTION, CINEMATIC </h1>
 
                 {/* Content Section */}
-                <div className="flex flex-col mt-5 md:flex-row justify-center items-center gap-8 px-6 md:px-45">
+                <div className="flex flex-col mt-5 md:flex-row justify-center items-center gap-8 px-6  lg:px-40">
                     {/* Left Image */}
                     <img
                         src="/photo/image.png"
                         alt="Wedding 1"
-                        className="w-full md:w-100 h-64 md:h-140 object-cover shadow-md "
+                        className="w-full md:w-70 h-60 md:h-90 lg:w-100 lg:h-140 object-cover shadow-md "
                     />
 
                     {/* Text Section */}
-                    <p
-                        className={`${playfair.className} text-black text-sm md:text-lg md:-mt-30 text-justify leading-relaxed md:w-1/2`}
-                    >
+                    <p className={`${playfair.className} text-black text-sm md:text-md lg:text-xl  text-justify leading-relaxed md:w-1/2`}>
                         Considered to be the epitome of Modern Photography and Filmmaking, Kanya
                         Studios is dedicated to transforming wedding moments into timeless
                         memories. With a passion for storytelling through both photography and
@@ -55,7 +53,7 @@ const FrontPage = () => {
                     <img
                         src="/photo/image2.png"
                         alt="Wedding 2"
-                        className="w-full md:w-100 h-64 md:h-140 md:-mt-80 object-cover  shadow-md"
+                        className="w-full md:w-70 h-64 md:h-90 lg:w-100 lg:h-140  lg:-mt-80 object-cover  shadow-md"
                     />
                 </div>
 
