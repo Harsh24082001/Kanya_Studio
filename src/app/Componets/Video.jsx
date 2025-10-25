@@ -35,7 +35,7 @@ const Video = () => {
           ></video>
 
           {/* Top angled cut */}
-          <div className="absolute top-0 w-full h-24 sm:h-40 bg-[#f0e9e0] [clip-path:polygon(0_0,100%_100%,100%_0)]"></div>
+          <div className="absolute top-0 w-full h-24 sm:h-40 bg-[#f0e9e0] [clip-path:polygon(0_0,110%_100%,100%_0)]"></div>
 
           {/* Bottom angled cut */}
           <div className="absolute bottom-0 w-full h-24 sm:h-50 bg-[#f0e9e0] [clip-path:polygon(0_102%,105%_102%,0_0)]"></div>
@@ -43,15 +43,11 @@ const Video = () => {
 
         {/* Overlay Text */}
         <div className="relative z-10 flex flex-col items-center justify-center min-h-[70vh] sm:min-h-[80vh] md:min-h-screen px-6 text-center ">
-          <h1
-            className={`${playfair.className} italic text-3xl sm:text-4xl md:text-6xl text-[#f7dcba] tracking-widest uppercase`}
-          >
+          <h1 className={`${playfair.className} italic text-3xl sm:text-4xl md:text-6xl text-[#f7dcba] tracking-widest uppercase`}>
             Cinematic Weddings
           </h1>
 
-          <p
-            className={`${playfair.className} mt-6 max-w-3xl text-sm sm:text-base md:text-lg text-white leading-relaxed`}
-          >
+          <p className={`${playfair.className} mt-6 max-w-3xl text-sm sm:text-base md:text-lg text-white leading-relaxed`} >
             Every wedding is a story waiting to be told — and at{" "}
             <span className="font-semibold">KANYA STUDIO</span>, we believe in telling it
             with soul. Over the past 2 years, we’ve had the privilege of capturing love
@@ -64,17 +60,13 @@ const Video = () => {
 
       <div className="w-full py-16 px-4 sm:px-8 md:px-16 lg:px-32 text-center">
         {/* Heading */}
-        <h1
-          className={`${playfair.className} italic text-3xl sm:text-4xl md:text-5xl font-bold flex items-center justify-center`}
-        >
+        <h1 className={`${playfair.className} italic text-3xl sm:text-4xl md:text-5xl font-bold flex items-center justify-center`}>
           Wedding Videos
         </h1>
 
         {/* Paragraph */}
         <div className="mt-8 flex justify-center">
-          <p
-            className={`${playfair.className} text-gray-800 text-sm sm:text-base md:text-lg leading-relaxed max-w-6xl`}
-          >
+          <p className={`${playfair.className} text-gray-800 text-sm sm:text-base md:text-lg leading-relaxed max-w-6xl`}>
             At Kanya Studios, we celebrate the untamed, the fearless, the wanderers — the
             new-age, modern couples who aren't afraid to break tradition and create
             something uniquely their own. For us, wedding storytelling is more than just

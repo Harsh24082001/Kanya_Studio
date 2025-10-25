@@ -46,7 +46,8 @@ const FrontPage = () => {
                         Studios is dedicated to transforming wedding moments into timeless
                         memories. With a passion for storytelling through both photography and
                         videography. We focus on the emotions, the details, and the fleeting
-                        moments that make every wedding unique. 
+                        moments that make every wedding unique. With over seven years of experience
+                         in the wedding and video editing industry.
                     </p>
 
                     {/* Right Image */}
@@ -74,11 +75,8 @@ const FrontPage = () => {
                 />
 
                 {/* Floating Icon */}
-                <img
-                    src="/photo/WeddingImage/icon.png"
-                    alt="Fly Icon"
-                    className="absolute top-5 sm:top-10 left-1/2 transform -translate-x-1/2 w-16 md:top-40 sm:w-24 md:w-42 mb-10"
-                />
+                <img src="/photo/WeddingImage/icon.png" alt="Fly Icon"
+                    className="absolute top-20 sm:top-10 left-1/2 transform -translate-x-1/2 w-16 md:top-20 sm:w-24 md:w-42 mb-10"/>
 
                 {/* Text Section */}
                 <div className="absolute inset-0 flex flex-col justify-center items-center px-6 sm:px-12 text-center text-white">
