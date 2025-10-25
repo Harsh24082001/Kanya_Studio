@@ -62,8 +62,8 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-300 mt-6">
-        <p className="text-center text-sm py-4 md:text-md">© 2024 Kanya Studio. All Rights Reserved.</p>
+      <div className="border border-gray-300 mt-6">
+        <p className="text-center text-sm py-4 md:text-md">Kanya Studio © 2024. By <a href="https://harshvishwa.vercel.app/">Harsh Vishwakarma</a>.</p>
       </div>
     </footer>
     )
