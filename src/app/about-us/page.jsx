@@ -43,7 +43,7 @@ const page = () => {
 
 
       <div className="flex flex-col md:flex-row items-center justify-center max-w-full py-10 px-6 md:py-20 md:px-40">
-        <img src="DiveshProfile.png" alt="DiveshProfile" className="w-60 h-90 md:w-90 md:h-120  object-cover shadow-lg" />
+        <img src="divesh.png" alt="DiveshProfile" className="w-60 h-90 md:w-90 md:h-120  object-cover shadow-lg" />
         <p className={`${playfair.className} text-base md:text-lg leading-relaxed text-justify mt-8 md:mt-0 md:ml-10  md:max-w-4xl`}>
           <span className="block text-3xl md:text-5xl font-bold leading-snug mb-3 text-[#c26e00]">
           Divesh Paswan</span> {"  "} CEO and Post Production Head of <strong>Kanya Studio</strong>, a seasoned creative professional 
