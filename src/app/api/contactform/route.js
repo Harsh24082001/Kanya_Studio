@@ -1,26 +1,20 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const cors = require("cors");
-const contactModel = require("../../../../Schema/Contact_Schema");
-require("dotenv").config({ path: "./.env" });
+import { NextResponse } from "next/server";
+import mongoose from "mongoose";
+import contactModel from "../../../../Schema/Contact_Schema.js";
 
-const app = express();
-const port = 4000; 
+let isConnected = false;
 
-// Middleware
-app.use(cors());
-app.use(express.json());
-
-// MongoDB connection
-mongoose
-  .connect(process.env.MONGODB)
-  .then(() => console.log("Connected to MongoDB"))
-  .catch((err) => console.error("Not Connected to MongoDB:", err));
-
-// API route
-app.post("/api/contactform", async (req, res) => {
+export async function POST(req) {
   try {
-    const { name, email, phone, guestCount, eventDetails, location, eventDate, services } = req.body;
+    const body = await req.json();
+    const { name, email, phone, guestCount, eventDetails, location, eventDate, services } = body;
+
+    // Connect to MongoDB
+    if (!isConnected) {
+      await mongoose.connect(process.env.MONGODB);
+      isConnected = true;
+      console.log("✅ Connected to MongoDB");
+    }
 
     const newContact = new contactModel({
       name,
@@ -33,15 +27,11 @@ app.post("/api/contactform", async (req, res) => {
       services,
     });
 
-    const customerDetails = await newContact.save();
-    console.log("Form Submitted:", customerDetails);
+    await newContact.save();
 
-    res.status(200).json({ success: true, message: "Form submitted successfully!" });
+    return NextResponse.json({ success: true, message: "Form submitted successfully!" });
   } catch (error) {
-    console.error("Error saving contact:", error);
-    res.status(500).json({ success: false, message: "Server error", error });
+    console.error("❌ Error saving contact:", error);
+    return NextResponse.json({ success: false, message: "Server error" }, { status: 500 });
   }
-});
-
-// Start server
-app.listen(port, () => console.log(`Server running on http://localhost:${port}`));
+}
