@@ -42,7 +42,7 @@ const Contact_Form = () => {
         console.log("Contact Form Submitted: ", formData);
 
         try {
-            const response = await axios.post("http://localhost:4000/contactform", formData);
+            const response = await axios.post("/api/contactform", formData);
             console.log("Response:", response.data);
             alert("Form submitted successfully!");
         } catch (error) {
