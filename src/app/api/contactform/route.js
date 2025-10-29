@@ -18,7 +18,7 @@ mongoose
   .catch((err) => console.error("Not Connected to MongoDB:", err));
 
 // API route
-app.post("/contactform", async (req, res) => {
+app.post("/api/contactform", async (req, res) => {
   try {
     const { name, email, phone, guestCount, eventDetails, location, eventDate, services } = req.body;
 
