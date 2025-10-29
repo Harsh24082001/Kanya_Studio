@@ -3,15 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "client": "next dev --turbopack",
-    "server": "nodemon src/app/api/contactform/route.js",
+    "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "server": "nodemon src/app/api/contactform/route.js"
   },
   "dependencies": {
-    "concurrently": "^8.2.2",
     "axios": "^1.12.2",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
