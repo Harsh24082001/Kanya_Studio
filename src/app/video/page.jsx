@@ -55,7 +55,7 @@ const page = () => {
 
       {/* Wedding Videos */}
       <div className="container mx-auto mb-20">
-        <h2 className="text-2xl font-bold mb-4 text-center">Wedding Videos</h2>
+        {/* <h2 className="text-2xl font-bold mb-4 text-center">Wedding Videos</h2> */}
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6">
           {videos.map((video, index) => (
             <div key={index} className="overflow-hidden  shadow-lg">
