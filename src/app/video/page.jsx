@@ -47,14 +47,14 @@ const page = () => {
           className="w-full h-full object-cover"
         ></video>
         <h1
-          className={`${playfair.className} absolute inset-0 flex items-center justify-center top-100 md:top-200 text-3xl md:text-7xl align-bottom text-white font-bold md:font-normal`}
+          className={`${playfair.className} absolute inset-0 flex items-center justify-center top-100 md:top-200 text-3xl md:text-6xl align-bottom text-white font-bold md:font-normal`}
         >
           RARE MOMENTS VIDEOS
         </h1>
       </div>
 
       {/* Wedding Videos */}
-      <div className="container mx-auto mb-20">
+      <div className="container mx-auto mb-20 mt-20">
         {/* <h2 className="text-2xl font-bold mb-4 text-center">Wedding Videos</h2> */}
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6">
           {videos.map((video, index) => (
